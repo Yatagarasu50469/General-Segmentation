@@ -26,16 +26,22 @@
                     |------->INPUTS
                     |------->LABELS
                 |------->TEST
-                    |------->dataPrintout.csv
                     |------->INPUTS
                     |------->LABELS
+        |------->OTHER
+                    |------->LOGO.PNG
+                    |------->SOCIAL.PNG
         |------->RESULTS
                 |------->TRAIN
-                    |------->model
                     |------->trainingHistory.csv
-                    |------->MODEL_PROGRESSION
+                    |------->trainingTime.txt
+                    |------->Model
+                    |------->Progression
                 |------->TEST
                     |------->dataPrintout.csv
+                    |------->Predictions
+                    |------->Summary
+					
 
 # INSTALLATION
 
@@ -93,9 +99,10 @@ Open a terminal or command prompt and run the following:
 	$ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
     $ pip3 install datetime glob2 pandas pillow matplotlib natsort notebook==6.5.6 numpy tqdm scikit-learn py7zr multivolumefile
 
-## Dataset
+## Example Dataset
 
 An example public dataset that can be easily obtained to try this program (ExONE Stainless Steel 316L Grains 500X, by Peter Warren et al.) may be obtained through: https://www.kaggle.com/datasets/peterwarren/exone-stainless-steel-316l-grains-500x/download?datasetVersionNumber=3  
-Splitting the data into **DATA/** **TRAIN**, or **TEST** (as may be desired) copy the contents of **Grains** to **INPUTS** and **Segmented** to **LABELS** (removing the seg suffix, so the filenames match between INPUTS and LABELS)
+
 Dataset reference(s): https://arxiv.org/pdf/2307.05911.pdf  https://www.youtube.com/watch?v=60zy93X30yE  
 
+Splitting the data into **DATA/** **TRAIN**, or **TEST** (as may be desired) copy the contents of **Grains** to **INPUTS** and **Segmented** to **LABELS** (removing the seg suffix, so the filenames match between INPUTS and LABELS)  
