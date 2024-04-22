@@ -4,7 +4,7 @@
 
 ***
     NAME:           General-Segmentation   
-    MODIFIED:       24 February 2024  
+    MODIFIED:       22 April 2024  
     VERSION:        0.1.0  
     LICENSE:        GNU General Public License v3.0  
     DESCRIPTION:    Convolutional Neural Network (CNN) for general segmentation of images  
@@ -49,26 +49,27 @@ The package versions do not necessarily need to match with those listed. However
 
 As more functionality is continually being added, minimum hardware specifications cannot be exactly ascertained, however validation of functionality is performed on systems containing 64+ GB DDR3/4/5 RAM, 32+ CPU threads at 3.0+ GHz, 1080Ti/2080Ti+/4090 GPUs, and 1TB+ SSD storage. 
 
-**Software**  
+**Windows - Software**  
 
-    Python             3.8.10
-    pip                23.3.2
+	Python             3.11.8
+	pip                24.0
+	opencv-python      4.9.0.80
+	scikit-learn       1.4.1.post1
+	torch              2.2.2+cu118
+	torchaudio         2.2.2+cu118
+	torchvision        0.17.2+cu118
+	tqdm               4.66.2
 
-
-**Python Packages**  
-
-    sklearn
-    torch              2.1.2+cu118
-	torchaudio         2.1.2+cu118
-	torchvision        0.1.2
-    tqdm               4.66.1   
-
+**Ubuntu 22.04 - Alternate/Additional Software**
+	
+	Python             3.10.12
+	pip                22.0.2
 
 **GPU/CUDA Acceleration:** Highly recommended. Note that there shouldn't be a need to manually install the CUDA toolkit, or cudnn as pytorch installation using pip should come include the neccessary files.
 
 ## Windows Pre-Installation
 
-If not already setup, install Python 3.8.10 (newer versions have not been tested for Windows) selecting the options to install for all users, and addding python.exe to PATH. For 64-bit systems: (https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe) and those that are 32-bit: (https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe)
+If not already setup, install Python 3.11.8 (newer versions have not been tested for Windows) selecting the options to install for all users, and addding python.exe to PATH.
 
 Open a command prompt (Not as an administrator!) and run the following: 
 
@@ -79,25 +80,31 @@ Open a command prompt (Not as an administrator!) and run the following:
 
 Open "Turn Windows Features On and Off", and enable "Windows Subsystem For Linux" if it is not already. Then open PowerShell and enter:
 
-    $ wsl.exe --install
+	$ wsl.exe --install
 	$ wsl.exe --update
 	
-Open the Microsoft Store application and search for "Ubuntu", installing the version of your choice. After opening and completing the setup as instructed, continue with the Ubuntu Pre-Installation instructions.
+Open the Microsoft Store application and search for "Ubuntu", installing the version of your choice (22.04 or newer is recommended), and completing the setup as instructed. Then open an Ubuntu terminal window and perform the following operations: 
+
+	$ sudo apt-get update -y 
+	$ sudo apt-get upgrade -y 
+	$ sudo apt-get autoremove -y 
+	$ sudo apt-get install -y libgl1-mesa-dev python3-pip wget git
 	
-## Ubuntu Pre-Installation
+## Native Ubuntu Pre-Installation
 
 Open a terminal window and perform the following operations:
     
-    $ sudo apt-get update
-	$ sudo apt-get install -y python3-pip wget git python3-opencv 
-	$ python3 -m pip install --upgrade pip
+	$ sudo apt-get update -y 
+	$ sudo apt-get upgrade -y 
+	$ sudo apt-get autoremove -y 
+	$ sudo apt-get install -y python3-pip wget git
     
 ## Main Installation
 
 Open a terminal or command prompt and run the following:
     
 	$ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-    $ pip3 install datetime glob2 pandas pillow matplotlib natsort notebook==6.5.6 numpy tqdm scikit-learn py7zr multivolumefile
+	$ pip3 install datetime glob2 pandas pillow matplotlib natsort notebook==6.5.6 numpy tqdm scikit-learn py7zr multivolumefile opencv-python ipywidgets
 
 ## Example Dataset
 
