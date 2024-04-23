@@ -55,9 +55,9 @@ As more functionality is continually being added, minimum hardware specification
 	pip                24.0
 	opencv-python      4.9.0.80
 	scikit-learn       1.4.1.post1
-	torch              2.2.2+cu118
-	torchaudio         2.2.2+cu118
-	torchvision        0.17.2+cu118
+	torch              2.2.2+cu121
+	torchaudio         2.2.2+cu121
+	torchvision        0.17.2+cu121
 	tqdm               4.66.2
 
 **Ubuntu 22.04 - Alternate/Additional Software**
@@ -103,7 +103,7 @@ Open a terminal window and perform the following operations:
 
 Open a terminal or command prompt and run the following:
     
-	$ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+	$ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 	$ pip3 install datetime glob2 pandas pillow matplotlib natsort notebook==6.5.6 numpy tqdm scikit-learn py7zr multivolumefile opencv-python ipywidgets
 
 ## Example Dataset
